@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
 
 :root{
-    --green: #4E592B;
+    --primary: #4E592B;
     --secondary: #F0DDDC;
 }
 
@@ -22,14 +22,35 @@ html{
 body{
     width: 100%;
     height: 100%;
-    background: var(--green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.teste{
-    font-weight: 700;
-    color: var(--secondary);
+.header{
+    width: 100%;
+    height: 90px;
+    background-color: var(--primary);
+}
+
+.landing-page{
+    width: 100%;
+    height: 1080px;
+    background-color: var(--primary);
+}
+
+.main-1{
+    width: 100%;
+    height: 1080px;
+    background-color: var(--secondary);
+}
+
+.main-2{
+    width: 100%;
+    height: 1080px;
+    background-color: var(--primary);
+}
+
+.footer{
+    width: 100%;
+    height: 500px;
+    background-color: var(--secondary);
 }
 
