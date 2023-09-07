@@ -36,28 +36,27 @@ body{
     width: 100%;
     height: 90px;
     background-color: var(--primary);
-    color: var(--textColor);
     display: flex;
+    position: fixed;
 }
 
 .header .brand-logo{
     width: 20%;
-    margin: 30px;
+    height: 100%;
+    margin-top: 25px;
     display: flex;
     justify-content: center;
 }
 
 img{
-    width: 57px;
-    height: 72px;   
+    width: 42px;
+    height: 57px;   
 }
 
 .header .navibar{
     width: 60%;
     height: 100%;
-    padding: 20px;
-    font-size: 14px; 
-    font-weight: 400;
+    font-size: 12px; 
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -66,11 +65,70 @@ img{
 a{
     text-decoration: none;
     color: var(--textColor);
+    display: inline-block;
+    position: relative;
 }
+
+h2{
+    padding-top: 20px;
+    margin: 16px;
+    font-weight: 400;
+}
+
+.first:after{
+    content: '';
+    position: absolute;
+    width: 77%;
+    margin-left: 16px;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--textColor);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    margin-bottom: 30px;
+}
+
+.second:after{
+    content: '';
+    position: absolute;
+    width: 71%;
+    margin-left: 16px;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--textColor);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    margin-bottom: 30px;
+}
+
+.third:after{
+    content: '';
+    position: absolute;
+    width: 71%;
+    margin-left: 16px;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--textColor);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    margin-bottom: 30px;
+}
+
+h2:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 
 .header .login-button{
     width: 20%;
-    padding: 30px;
+    height: 100%;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
 }
@@ -78,23 +136,24 @@ a{
 .header button{
     width: 100px;
     height: 40px;
-    background-color: var(--secondary);
+    background-color: var(--textColor);
     font-family: 'Josefin Sans';
     font-weight: bold;
-    font-size: 14px; 
+    font-size: 18px; 
     color: var(--primary);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-h2{
-    padding-right: 50px;
-    padding-top: 20px;
+button:hover{
+    background-color: #606B39;
+    color: white;
 }
 
-span{
-    margin-top: 21px;
+button:active{
+    background-color: #2b301c;
 }
 
 .landing-page{
