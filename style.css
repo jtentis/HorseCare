@@ -1,14 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
 
+@font-face {
+    font-family: Dubiel;
+    src: url(Fonts/Dubiel.ttf);
+}
+
 :root{
-    --primary: #4E592B;
-    --secondary: #F0DDDC;
+    --primary: #343F16;
+    --secondary: #CEB5B4;
+    --textColor: #F0DDDC;
 }
 
 html{
     box-sizing: border-box;
     height: 100%;
+    /* font-family: 'Dubiel'; */
     font-family: 'Josefin Sans';
+    scroll-behavior: smooth;
 }
 
 *,
@@ -28,6 +36,65 @@ body{
     width: 100%;
     height: 90px;
     background-color: var(--primary);
+    color: var(--textColor);
+    display: flex;
+}
+
+.header .brand-logo{
+    width: 20%;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    width: 57px;
+    height: 72px;   
+}
+
+.header .navibar{
+    width: 60%;
+    height: 100%;
+    padding: 20px;
+    font-size: 14px; 
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+.header .login-button{
+    width: 20%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.header button{
+    width: 100px;
+    height: 40px;
+    background-color: var(--secondary);
+    font-family: 'Josefin Sans';
+    font-weight: bold;
+    font-size: 14px; 
+    color: var(--primary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h2{
+    padding-right: 50px;
+    padding-top: 20px;
+}
+
+span{
+    margin-top: 21px;
 }
 
 .landing-page{
