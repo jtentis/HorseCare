@@ -8,7 +8,7 @@
 :root{
     --primary: #343F16;
     --secondary: #CEB5B4;
-    --textColor: #F0DDDC;
+    --terciary: #F0DDDC;
 }
 
 html{
@@ -34,23 +34,26 @@ body{
 
 .header{
     width: 100%;
-    height: 90px;
+    height: 100px;
     background-color: var(--primary);
     display: flex;
     position: fixed;
+    z-index: 105;
 }
 
 .header .brand-logo{
     width: 20%;
     height: 100%;
-    margin-top: 25px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
-img{
-    width: 42px;
-    height: 57px;   
+.logo{
+    width: 136px;
+    height: 70px;  
+    z-index: 105;
 }
 
 .header .navibar{
@@ -60,11 +63,14 @@ img{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    position: relative;
 }
 
 a{
     text-decoration: none;
-    color: var(--textColor);
+    color: var(--terciary);
     display: inline-block;
     position: relative;
 }
@@ -78,16 +84,16 @@ h2{
 .first:after{
     content: '';
     position: absolute;
-    width: 77%;
+    width: 60%;
     margin-left: 16px;
     transform: scaleX(0);
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--textColor);
+    background-color: var(--terciary);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .second:after{
@@ -99,10 +105,10 @@ h2{
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--textColor);
+    background-color: var(--terciary);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .third:after{
@@ -114,10 +120,10 @@ h2{
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--textColor);
+    background-color: var(--terciary);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 h2:hover:after {
@@ -136,7 +142,7 @@ h2:hover:after {
 .header button{
     width: 100px;
     height: 40px;
-    background-color: var(--textColor);
+    background-color: var(--terciary);
     font-family: 'Josefin Sans';
     font-weight: bold;
     font-size: 18px; 
@@ -145,6 +151,7 @@ h2:hover:after {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
 }
 
 button:hover{
@@ -158,11 +165,135 @@ button:active{
 
 .landing-page{
     width: 100%;
-    height: 1080px;
+    height: 940px;
     background-color: var(--primary);
+    display: flex;
 }
 
 .main-1{
+    width: 100%;
+    height: 1080px;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-centro{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary);
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600; 
+    margin-top: 35px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.textos{
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+.texto-esquerda{
+    width: 50%;
+    height: 100px;
+    margin-left: 300px;
+    margin-top: 50px;
+    display: flex;
+}
+
+.texto-esquerda .adress{
+    margin-top: 16px;
+    width: 432px; 
+    color: rgb(31, 31, 31);
+    font-family: Josefin Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500; 
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.location{
+    margin-left: 45px;
+    width: 80px;
+    height: 77px; 
+}
+
+.conteudo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.esquerda{
+    width: 50%;
+    height: 620px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.maps{
+    border-radius: 15px;
+    margin-right: 100px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    -webkit-transform: scale(1.0);
+	transform: scale(1.0);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.maps:hover{
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+.direita{
+    width: 50%;
+    height: 920px;
+    display: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.direita .topico{
+    width: 100%;
+    padding-right: 260px;
+    margin-top: 80px;
+    margin-left: 100px;
+    color: #343F16;
+    font-family: Josefin Sans;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.direita .bird-l-1{
+    margin-left: 500px;
+    margin-top: -150px;
+    position: absolute;
+    width: 55px;
+    height: 38px; 
+}
+
+.direita .bird-l-2{
+    margin-left: 540px;
+    margin-top: -110px;
+    position: absolute;
+    width: 95px;
+    height: 57px; 
+}
+
+.main-1-2{
     width: 100%;
     height: 1080px;
     background-color: var(--secondary);
@@ -180,3 +311,80 @@ button:active{
     background-color: var(--secondary);
 }
 
+.tree{
+    margin-left: 80px;
+    margin-top: 723px;
+    width: 186px;
+    height: 217px; 
+    position: absolute;
+    z-index: 1;
+}
+
+.grass{
+    margin-left: 230px;
+    margin-top: 905px;
+    width: 50px;
+    height: 34px;  
+    position: absolute;
+}
+
+.bird-l{
+    margin-left: 400px;
+    margin-bottom: 570px;
+    width: 95px;
+    height: 57px; 
+    position: absolute;
+}
+
+.bird-r{
+    margin-left: 670px;
+    margin-top: 570px;
+    width: 95px;
+    height: 57px; 
+    position: absolute;
+}
+
+.imagem{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container{
+    width: 425px;
+    height: 520.828px; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--terciary);
+    margin-right: 50px;
+    border-radius: 30px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.cavalo{
+    width: 425px;
+    height: 677px; 
+    padding-bottom: 79px;
+}
+
+.texto{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #F0DDDC;
+    font-family: Josefin Sans;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    margin-left: 50px;
+    margin-top: 30px;
+    user-select: none;
+}
