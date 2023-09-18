@@ -25,10 +25,11 @@ html{
 body{
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 /* animação */
-.hidden{
+.invi{
     opacity: 0;
     transition: all 1s;
     filter: blur(5px);
@@ -39,6 +40,41 @@ body{
     opacity: 1;
     filter: blur(0px);
     transform: translateX(0);
+}
+
+.wave-primary{
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-primary svg {
+    position: relative;
+    display: block;
+    width: calc(119% + 1.3px);
+    height: 68px;
+}
+
+.wave-primary .shape-fill {
+    fill: #343F16;
+}
+
+.wave-secondary {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-secondary svg {
+    position: absolute;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 90px;
+}
+
+.wave-secondary .shape-fill {
+    fill: #F0DDDC;
 }
 
 .header{
@@ -676,8 +712,78 @@ button:active{
     background-color: var(--primary);
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+}
+
+.informacoes{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-bottom: 50px;
+    color: var(--secondary);
+}
+
+.informacoes.links li{
+    margin: 10px;
+    align-self: flex-start;
+    font-size: 20px;
+}
+
+.informacoes.links h1{
+    margin-bottom: 70px;
+    margin-top: 130px;
+}
+
+.informacoes.email h1{
+    margin-bottom: 70px;
+    margin-top: 130px;
+}
+
+.informacoes.email input{
+    margin: 10px;
+    align-self: flex-start;
+    width: 100%;
+    height: 90px;
+}
+
+.informacoes.email .texto{
+    height: 900px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    background-color: var(--secondary);
+}
+
+::-webkit-input-placeholder {
+    text-align: top;
+}
+
+:-moz-placeholder {
+    text-align: top;
+}
+
+
+.informacoes.email .email{
+    height: 150px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    background-color: var(--secondary);
+}
+
+.informacoes.email h3{
+    align-self: flex-start;
+    margin-left: 8px;
 }
 
 .para-o-topo{
@@ -707,3 +813,4 @@ button:active{
     pointer-events: auto;
     opacity: 1;
 }
+

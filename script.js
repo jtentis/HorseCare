@@ -11,11 +11,11 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-const hiddenTextoPrincipal = document.querySelectorAll('.hidden');
+const hiddenTextoPrincipal = document.querySelectorAll('.invi');
 hiddenTextoPrincipal.forEach((el) => observer.observe(el));
 
 // botao para voltar pro topo
 window.addEventListener('scroll', function(){
     var scroll = document.querySelector('.para-o-topo');
-    scroll.classList.toggle("active", window.scrollY > 1000)
+    scroll.classList.toggle("active", window.scrollY > 800)
 })
