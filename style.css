@@ -386,19 +386,24 @@ button:active{
     display: column;
     justify-content: center;
     align-items: center;
+    padding-right: 350px;
 }
 
 .direita .topico{
     width: 100%;
-    padding-right: 260px;
-    margin-top: 220px;
+    margin-top: 30px;
     /* margin-left: 80px; */
     color: var(--textColor);
     font-family: Josefin Sans;
     font-size: 24px;
-    font-style: normal;
     font-weight: 500;
     line-height: normal; 
+    text-align: justify;
+}
+
+.direita h1{
+    text-align: center;
+    margin-top: 75px;
 }
 
 .direita .bird-l-1{
@@ -545,6 +550,8 @@ button:active{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
 .cards-align{
@@ -689,7 +696,7 @@ div.card:nth-child(3) > div:nth-child(2) > a:nth-child(10){
 
 .main-3{
     width: 100%;
-    height: 920px;
+    height: 980px;
     background-color: var(--secondary);
     display: flex;
     flex-direction: column;
@@ -774,7 +781,7 @@ div.card:nth-child(3) > div:nth-child(2) > a:nth-child(10){
 
 .footer{
     width: 100%;
-    height: 500px;
+    height: 400px;
     background-color: var(--primary);
     display: flex;
     flex-direction: row;
@@ -792,6 +799,7 @@ div.card:nth-child(3) > div:nth-child(2) > a:nth-child(10){
     padding-right: 100px;
     padding-left: 100px;
     margin-bottom: 50px;
+    margin-top: 160px;
     color: var(--secondary);
 }
 
@@ -803,13 +811,11 @@ div.card:nth-child(3) > div:nth-child(2) > a:nth-child(10){
 
 .informacoes.links h1{
     margin-bottom: 30px;
-    margin-top: 150px;
     color: var(--secondary);
 }
 
 .informacoes.email h1{
     margin-bottom: 30px;
-    margin-top: 150px;
 }
 
 .informacoes.email input{
@@ -861,12 +867,14 @@ div.card:nth-child(3) > div:nth-child(2) > a:nth-child(10){
 
 .copyright{
     width: 100%;
-    height: 30px;
+    height: 60px;
+    padding-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--primary);
     color: white;
+    font-size: 12px;
 }
 
 
