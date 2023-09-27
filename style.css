@@ -790,27 +790,30 @@ div.card:nth-child(3) > div:nth-child(2) > a:nth-child(10){
 }
 
 .informacoes{
-    width: 50%;
+    width: 33%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
     padding-right: 100px;
-    padding-left: 100px;
     margin-bottom: 50px;
     margin-top: 160px;
     color: var(--secondary);
 }
 
-.informacoes.links li{
+.informacoes a{
     margin: 10px;
     align-self: flex-start;
     font-size: 20px;
 }
 
-.informacoes.links h1{
-    margin-bottom: 30px;
+.informacoes.links a{
+    padding-left: 50px;
+}
+
+.informacoes h1{
+    margin-bottom: 50px;
     color: var(--secondary);
 }
 
@@ -831,11 +834,11 @@ div.card:nth-child(3) > div:nth-child(2) > a:nth-child(10){
     border-width: 2px;
     border: solid 1px gray;
     outline: none;
-    padding: 10px;
     background-color: rgba(255, 255, 255, 0.349);
     color: white;
     word-wrap: break-word;
     word-break: break-all;
+    padding: 10px;
 }
 
 .informacoes.email .email{
