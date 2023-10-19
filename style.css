@@ -147,6 +147,10 @@ a{
     position: relative;
 }
 
+button a{
+    color: var(--primary);
+}
+
 h2{
     padding-top: 20px;
     margin: 16px;
@@ -210,11 +214,7 @@ h2:hover:after {
 
 button:hover{
     background-color: #2b301c;
-    color: white;
-}
-
-button:active{
-    background-color: #15180e;
+    color: var(--secondary);
 }
 
 .landing-page{
