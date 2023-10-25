@@ -20,8 +20,8 @@
             <a href="#main-3"><h2 class="link fourth">Timeline</h2></a>
             <a href="#footer"><h2 class="link third">Contatos</h2></a>
         </div>
-        <div class="login-button">
-            <a href="login-page/index.html"><button>Login</button></a>
+        <div class="login-button" id="login-button">
+            <a><button>Login</button></a>
         </div>
     </div>
     <div id="landing" class="landing-page">
@@ -220,5 +220,53 @@
     <a href="#" class="para-o-topo">
 		<span class="material-icons">arrow_upward</span>
 	</a>
+    <div class="container-login" id="container-login">
+        <div class="form-container-login sign-up">
+            <form>
+                <h1>Registrar</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>ou preencha seus dados</span>
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Senha">
+                <input type="password" placeholder="Confirmação de senha">
+                <button>Registrar</button>
+            </form>
+        </div>
+        <div class="form-container-login sign-in">
+            <form>
+                <h1>Fazer login</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>ou use seu email e senha</span>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Senha">
+                <p>Esqueceu sua senha? <a href="#">Recupere!</a></p>
+                <button>Login</button>
+            </form>
+        </div>
+        <div class="toggle-container-login">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Já possui login?</h1>
+                    <p>Faça login para ter acesso à todas as funcinalidades do site!</p>
+                    <button class="hidden" id="login">Fazer login</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Ainda não tem login?</h1>
+                    <p>Se registre para ter acesso à todas as funcionalidades do site!</p>
+                    <button class="hidden" id="register">Registrar</button>
+                </div>
+            </div>
+        </div>
 </body>
 </html>

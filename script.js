@@ -19,3 +19,8 @@ window.addEventListener('scroll', function(){
     var scroll = document.querySelector('.para-o-topo');
     scroll.classList.toggle("active", window.scrollY > 800)
 })
+
+document.getElementById('login-button').addEventListener('click',
+function(){
+    document.querySelector('.container-login').style.opacity='1';
+})
