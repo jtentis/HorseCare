@@ -1,3 +1,7 @@
+const container = document.getElementById('container-login');
+const registerBtn = document.getElementById('register');
+const loginBtn = document.getElementById('login');
+
 //fade in animação
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -24,3 +28,11 @@ document.getElementById('login-button').addEventListener('click',
 function(){
     document.querySelector('.container-login').style.opacity='1';
 })
+
+registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
+});
+
+loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
+});
