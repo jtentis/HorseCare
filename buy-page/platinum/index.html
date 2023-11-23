@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HorseCare / Planos / Platinum</title>
     <link rel="stylesheet" href="style.css">
-    <script src="/buy-page/script.js"></script>
 </head>
 <body>
     <section>
@@ -40,6 +39,16 @@
         </div>
       </div>
     </section>
+    <script>
+      function img(anything) {
+        document.querySelector('.slide').src = anything;
+          }
+
+      function change(change) {
+        const line = document.querySelector('.home');
+        line.style.background = change;
+      }
+    </script>
   </body>
   
   </html>
