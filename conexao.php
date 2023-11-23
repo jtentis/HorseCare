@@ -3,7 +3,7 @@
 $server_name="localhost";
 $username="root";
 $password="";
-$database_name="HorseCare";
+$database_name="horsecare";
 
 $conn=mysqli_connect(hostname: $server_name, username: $username, password: $password, database: $database_name);
 //now check the connection
@@ -19,7 +19,7 @@ if(isset($_POST['save']))
 	 $email = $_POST['email'];
 	 $password = $_POST['password'];
 
-	 $sql_query = "INSERT INTO HorseCare (name, email, password)
+	 $sql_query = "INSERT INTO registro (name, email, password)
 	 VALUES ('$name','$email','$password')";
 
 	 if (mysqli_query($conn, $sql_query)) 

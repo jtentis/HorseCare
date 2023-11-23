@@ -125,6 +125,26 @@ button:hover{
   background-color: #2b301c;
 }
 
+.datas{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  gap: 3px;
+}
+
+#data{
+  background-color: #0000002a;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 8px;
+  width: 40%;
+  outline: none;
+  font-family: 'Josefin Sans'
+}
+
 @media only screen and (max-width:1350px) {
   .option{
     flex-wrap: wrap;
