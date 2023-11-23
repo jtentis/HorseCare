@@ -1,3 +1,18 @@
+<?php
+
+    if(isset($_POST['submit'])){
+
+        include_once('C:\xampp\htdocs\HorseCare\conexao.php');
+    
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+
+        $inserir = mysqli_query($conexao, "INSERT INTO `registro` (`nome`, `email`, `senha`) VALUES ('$nome', '$email', '$senha')");
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +29,7 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form action="/conexao.php" method="POST">
+            <form action="index.php" method="POST">
                 <h1>Registrar</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -23,11 +38,11 @@
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>ou preencha seus dados</span>
-                <input type="text" placeholder="Nome" name="name" id="name">
+                <input type="text" placeholder="Nome" name="nome" id="name">
                 <input type="email" placeholder="Email" name="email" id="email">
-                <input type="password" placeholder="Senha" name="password" id="password">
+                <input type="password" placeholder="Senha" name="senha" id="senha">
                 <!-- <input type="password" placeholder="Confirmação de senha"> -->
-                <button>Registrar</button name="save">
+                <input type="submit" value="Registrar" id="submit" name="submit">
             </form>
         </div>
         <div class="form-container sign-in">
@@ -43,7 +58,7 @@
                 <input type="email" placeholder="Email">
                 <input type="password" placeholder="Senha">
                 <p>Esqueceu sua senha? <a href="#">Recupere!</a></p>
-                <button>Login</button>
+                <input type="submit" value="Login" id="submit" name="submit">
             </form>
         </div>
         <div class="toggle-container">

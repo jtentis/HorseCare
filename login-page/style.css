@@ -53,6 +53,20 @@ body{
     margin: 15px 0 10px;
 }
 
+#submit{
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
 .container button{
     background-color: var(--primary);
     color: #fff;
@@ -82,7 +96,7 @@ body{
     height: 100%;
 }
 
-.container input{
+.container input[type=text], input[type=email], input[type=password]{
     background-color: #eee;
     border: none;
     margin: 8px 0;
@@ -219,11 +233,15 @@ body{
     color: var(--primary);
 }
 
-form input:focus{
+input:focus{
     background-color: rgb(209, 207, 207);
 }
 
-button:hover{
+input[type=text]:focus{
+    background-color: rgb(209, 207, 207);
+}
+
+#submit:hover{
     background-color: #20270e;
     transition: all 0.3s ease-in-out;
 }
