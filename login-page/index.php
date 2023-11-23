@@ -11,6 +11,25 @@
         $inserir = mysqli_query($conexao, "INSERT INTO `registro` (`nome`, `email`, `senha`) VALUES ('$nome', '$email', '$senha')");
     }
 
+    // if(isset($_GET['login'])){
+
+    //     $login = mysqli_query($conexao, "SELECT nome, senha FROM `registro` WHERE nome ='$nome' AND senha = '$senha'");
+    //     $res = mysqli_fetch_row($login);
+
+    //     include_once('C:\xampp\htdocs\HorseCare\conexao.php');
+
+    //     $nome = $_GET['nome'];
+    //     $email = $_GET['email'];
+
+    //     if($res){
+    //         header('location:/index.html');
+    //     }
+
+    //     else{
+    //         header('location:error.php');
+    //     }
+    // }
+
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +65,7 @@
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
+            <form action="index.php" method="GET">
                 <h1>Fazer login</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -55,10 +74,10 @@
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>ou use seu email e senha</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Senha">
+                <input type="email" placeholder="Email" name="nome">
+                <input type="password" placeholder="Senha" name="senha">
                 <p>Esqueceu sua senha? <a href="#">Recupere!</a></p>
-                <input type="submit" value="Login" id="submit" name="submit">
+                <input type="submit" value="Login" id="submit" name="login">
             </form>
         </div>
         <div class="toggle-container">
