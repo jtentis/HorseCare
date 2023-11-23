@@ -103,7 +103,7 @@ a{
   text-decoration: none;
 }
 
-button {
+input[type='submit'] {
   width: 50%;
   height: 60px;
   padding: 10px;
@@ -118,10 +118,12 @@ button {
   font-size: large;
   cursor: pointer;
   transition: 0.3s;
+  align-self: center;
+  margin-left: 25%;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
 }
 
-button:hover{
+input[type='submit']:hover{
   background-color: #2b301c;
 }
 
@@ -133,16 +135,235 @@ button:hover{
   gap: 3px;
 }
 
-#data{
+#data_ini, #data_fim, #email{
   background-color: #0000002a;
   border: none;
   margin: 8px 0;
   padding: 10px 15px;
   font-size: 13px;
   border-radius: 8px;
-  width: 40%;
   outline: none;
   font-family: 'Josefin Sans'
+}
+
+#data_ini, #data_fim{
+  width: 25%;
+}
+
+#email{
+  width: 50%;
+}
+
+#email:focus{
+  background-color: #0000004f;
+}
+
+@media only screen and (max-width:1350px) {
+  .option{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .left .main_image img{
+    width: 80%;
+    height: 80%;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .container {
+    max-width: 90%;
+    margin: auto;
+    height: auto;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width:511px) {
+  .container {
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .left, .right {
+    padding: 0;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .option {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
+:root{
+  --primary: #343F16;
+  --secondary: #F0DDDC;
+  --terciary: #CEB5B4;
+  --textColor: #383636;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans';
+  background: var(--primary);
+}
+
+.container {
+  max-width: 75%;
+  margin: auto;
+  height: 760px;
+  margin-top: 5%;
+  background: var(--secondary);
+  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.left, .right {
+  width: 50%;
+  padding: 30px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex1 {
+  display: flex;
+}
+
+.left .main_image{
+  display: flex;
+  flex-direction: column;
+}
+
+.left .main_image img{
+  margin-top: 30px;
+  width: 450px;
+  height: 500px;
+  align-self: center;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.option img {
+  margin-top: 55px;
+  margin-left: 20px;
+  width: 75px;
+  height: 75px;
+  padding: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+
+.option img:hover{
+  transform: scale(0.95);
+}
+
+.right {
+  padding: 50px 100px 100px 50px;
+}
+
+li{
+  margin-left: 15px;
+}
+
+h3 {
+  color: black;
+  margin: 20px 0 20px 0;
+  font-size: 25px;
+}
+
+h4 {
+  color: var(--primary);
+}
+
+p {
+  margin: 20px 0 50px 0;
+  line-height: 25px;
+}
+
+a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+input[type='submit'] {
+  width: 50%;
+  height: 60px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: #606B39;
+  color: white;
+  margin-top: 5%;
+  border-radius: 30px;
+  align-self: center;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+  transition: 0.3s;
+  align-self: center;
+  margin-left: 25%;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+input[type='submit']:hover{
+  background-color: #2b301c;
+}
+
+.datas{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  gap: 3px;
+}
+
+#data_ini, #data_fim, #email{
+  background-color: #0000002a;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 8px;
+  outline: none;
+  font-family: 'Josefin Sans'
+}
+
+#data_ini, #data_fim{
+  width: 25%;
+}
+
+#email{
+  width: 50%;
+}
+
+#email:focus{
+  background-color: #0000004f;
 }
 
 @media only screen and (max-width:1350px) {

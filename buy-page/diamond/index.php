@@ -1,3 +1,23 @@
+<?php
+
+    if(isset($_POST['submit'])){
+
+        include_once('C:\xampp\htdocs\HorseCare\conexao.php');
+    
+        $email = $_POST['email'];
+        $racao = 'Capim Coast Cross';
+        $baia = '16m2';
+        $banho_dia = '3';
+        $ferrageamento_quinzenal = '1';
+        $higiene_diaria = '1';
+        $veterinario_semanal = '1';
+        $data_ini = $_POST['data_ini'];
+        $data_fim = $_POST['data_fim'];
+
+        $hospedar_diamond = mysqli_query($conexao, "INSERT INTO `planodiamond` (`baia`, `racao`, `banho_dia`, `ferrageamento_quinzenal`, `veterinario_semanal`, `higiene_diaria`, `email`, `data_ini`,`data_fim`) VALUES ('$baia', '$racao', '$banho_dia', '$ferrageamento_quinzenal', '$higiene_diaria', '$veterinario_semanal','$email', '$data_ini', '$data_fim')");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,11 +56,14 @@
             <li>Desconto em cursos equestres</li>
           </p>
           <p>Ao lado, as imagens correspontes ao Plano Diamond!</p>
-          <div class="datas">
-            <input type="date" name="data" id="data">
-            <input type="date" name="data2" id="data">
-          </div>
-          <a href="#"><button>Hospedar</button></a>
+          <form action="index.php" method="POST">
+            <div class="datas">
+              <input type="date" name="data_ini" id="data_ini">
+              <input type="date" name="data_fim" id="data_fim">
+              <input type="email" placeholder="Email" name="email" id="email">
+            </div>
+            <input type="submit" value="Hospedar" name="submit" id="submit">
+          </form>
         </div>
       </div>
     </section>
