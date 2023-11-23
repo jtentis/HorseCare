@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="/Imagens/Logos/LOGO-CUT-WHITE.png">
+    <link rel="icon" href="Imagens/LOGO-CUT-WHITE.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HorseCare / Planos / Diamond</title>
     <link rel="stylesheet" href="style.css">
-    <script src="/buy-page/script.js"></script>
 </head>
 <body>
     <section>
       <div class="container flex">
         <div class="left">
           <div class="main_image">
-            <img src="/Imagens/Cards/cavalo-card-diamond.jpg" class="slide">
+            <img src="Imagens/cavalo-card-diamond.jpg" class="slide">
           </div>
           <div class="option flex">
-            <img src="/buy-page/diamond/Imagens/piquete2.jpeg" onclick="img('/buy-page/diamond/Imagens/piquete2.jpeg')">
-            <img src="/buy-page/diamond/Imagens/piquete1.jpeg" onclick="img('/buy-page/diamond/Imagens/piquete1.jpeg')">
-            <img src="/buy-page/diamond/Imagens/baia-diamond.jpeg" onclick="img('/buy-page/diamond/Imagens/baia-diamond.jpeg')">
-            <img src="/buy-page/diamond/Imagens/banho.jpeg" onclick="img('/buy-page/diamond/Imagens/banho.jpeg')">
-            <img src="/buy-page/diamond/Imagens/local.jpeg" onclick="img('/buy-page/diamond/Imagens/local.jpeg')">
-            <img src="/buy-page/diamond/Imagens/local2.jpeg" onclick="img('/buy-page/diamond/Imagens/local2.jpeg')">
+            <img src="Imagens/piquete2.jpeg" onclick="img('Imagens/piquete2.jpeg')">
+            <img src="Imagens/piquete1.jpeg" onclick="img('Imagens/piquete1.jpeg')">
+            <img src="Imagens/baia-diamond.jpeg" onclick="img('Imagens/baia-diamond.jpeg')">
+            <img src="Imagens/banho.jpeg" onclick="img('Imagens/banho.jpeg')">
+            <img src="Imagens/local.jpeg" onclick="img('Imagens/local.jpeg')">
+            <img src="Imagens/local2.jpeg" onclick="img('Imagens/local2.jpeg')">
           </div>
         </div>
         <div class="right">
@@ -45,6 +44,16 @@
         </div>
       </div>
     </section>
+    <script>
+      function img(anything) {
+        document.querySelector('.slide').src = anything;
+          }
+
+      function change(change) {
+        const line = document.querySelector('.home');
+        line.style.background = change;
+      }
+    </script>
   </body>
   
   </html>
