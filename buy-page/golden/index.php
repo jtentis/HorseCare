@@ -56,9 +56,9 @@
           <p>Ao lado, as imagens correspontes ao Plano Golden!</p>
           <form action="index.php" method="POST">
             <div class="datas">
-              <input type="date" name="data_ini" id="data_ini">
-              <input type="date" name="data_fim" id="data_fim">
-              <input type="email" placeholder="Email" name="email" id="email">
+              <input type="date" name="data_ini" id="data_ini" required>
+              <input type="date" name="data_fim" id="data_fim" required>
+              <input type="email" placeholder="Email" name="email" id="email" required>
             </div>
             <input type="submit" value="Hospedar" name="submit" id="submit">
           </form>
