@@ -19,3 +19,8 @@ window.addEventListener('scroll', function(){
     var scroll = document.querySelector('.para-o-topo');
     scroll.classList.toggle("active", window.scrollY > 800)
 })
+
+function changeStyle(){
+    var element = document.getElementById("dialog");
+    element.style.opacity = "0.5";
+}

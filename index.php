@@ -15,6 +15,9 @@
             <a href="#header"><img src="Imagens/Logos/LOGO.png" class="logo" srcset=""></a>
         </div>
         <div class="navibar">
+            <div id="dialog" title="Basic dialog" style="opacity: 0;">
+                <p>Necessário fazer login!</p>
+            </div>
             <a href="#Sobre"><h2 class="link first">Sobre</h2></a>
             <a href="#main-2"><h2 class="link second">Hospedar</h2></a>
             <a href="#main-3"><h2 class="link fourth">Timeline</h2></a>
@@ -107,7 +110,7 @@
                     <li>Antedimento veterinário quinzenal</li>
                     <li>Escovação e higiene diária</li>
                 </p>
-                <a href="buy-page/platinum/index.php"><h4 class="saiba-mais">Clique para saber mais...</h4></a>
+                <a href="#" onclick="changeStyle()"><h4 class="saiba-mais">Clique para hospedar</h4></a>
                 </div>
             </div>
                 <div class="card invi">
@@ -123,7 +126,7 @@
                         <li>Escovação e higiene diária</li>
                         <li>Desconto em cursos equestres</li>
                     </p>
-                    <a href="buy-page/diamond/index.php"><h4 class="saiba-mais">Clique para saber mais...</h4></a>
+                    <a href="#" onclick="changeStyle()"><h4 class="saiba-mais">Clique para hospedar</h4></a>
                     </div>
                 </div>    
             <div class="card invi">
@@ -138,7 +141,7 @@
                     <li>Antedimento veterinário mensal</li>
                     <li>Escovação e higiene a cada 3 dias</li>
                 </p>
-                <a href="buy-page/golden/index.php"><h4 class="saiba-mais">Clique para saber mais...</h4></a>
+                <a href="#" onclick="changeStyle()"><h4 class="saiba-mais">Clique para hospedar</h4></a>
                 </div>
             </div>           
         </div>
