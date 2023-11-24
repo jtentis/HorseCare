@@ -86,7 +86,7 @@ body{
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #343f1649;
+	background-color: #15180e;
 	border-radius: 40%;
 	padding: 0.5rem;
 	text-decoration: none;
@@ -96,7 +96,8 @@ body{
 }
 
 .para-o-topo:hover{
-    background-color: #15180e;
+    background-color: var(--secondary);
+    color: #15180e;
 }
 
 .para-o-topo.active{
