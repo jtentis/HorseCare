@@ -210,17 +210,17 @@
     <div id="footer" class="footer">
         <div class="informacoes links">
             <h1>Contatos</h1>
-            <a href="https://www.instagram.com/tnszpj/?hl=pt-br"><i class="fa-brands fa-instagram"></i> Instagram</a>
-            <a href="https://www.linkedin.com/in/jtentis/"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+            <a href="https://www.instagram.com/tnszpj/?hl=pt-br" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.linkedin.com/in/jtentis/" target="_blank"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
             <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
             <a href="#"><i class="fa-brands fa-tiktok"></i> Tiktok</a>
         </div>
         <div class="informacoes nav">
             <h1>Página</h1>
+            <a href="#">Landing Page</a>
             <a href="#Sobre">Sobre</a>
             <a href="#main-2">Hospedar</a>
             <a href="#main-3">Timeline</a>
-            <a href="#">Contatos</a>
         </div>
         <div class="informacoes email">
             <h1>News Letter</h1>

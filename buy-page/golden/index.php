@@ -27,7 +27,7 @@
       
       if ($query->num_rows > 0) {
           // Login bem-sucedido
-          header('Location: http://localhost/HorseCare/logout.php');
+          header('Location: http://localhost/HorseCare/buy-page/compraEfetuada.html');
       } else {
           echo '
           <div class="modal-error">
