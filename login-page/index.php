@@ -6,7 +6,7 @@
     
         $nome = $_POST['nome'];
         $email = $_POST['email'];
-        $senha = ($_POST['senha']);
+        $senha = (base64_encode($_POST['senha']));
 
         $inserir = mysqli_query($conexao, "INSERT INTO `registro` (`nome`, `email`, `senha`) VALUES ('$nome', '$email', '$senha')");
     }
@@ -28,7 +28,7 @@ if ($conexao->connect_error) {
 
 if (isset($_POST['login'])) {
     $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    $senha = base64_encode($_POST['senha']);
 
     // Utilizando prepared statements para evitar SQL Injection
     $query = $conexao->prepare("SELECT email, senha FROM `registro` WHERE email = ? AND senha = ?");
