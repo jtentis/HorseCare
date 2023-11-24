@@ -207,3 +207,10 @@ input[type='submit']:hover{
     flex-wrap: wrap;
   }
 }
+
+.modal-error{
+  position: absolute;
+  right: 800;
+  margin-bottom: 10%;
+  color: red;
+}

@@ -16,6 +16,30 @@
 
         $hospedar_diamond = mysqli_query($conexao, "INSERT INTO `planodiamond` (`baia`, `racao`, `banho_dia`, `ferrageamento_quinzenal`, `veterinario_semanal`, `higiene_diaria`, `email`, `data_ini`,`data_fim`) VALUES ('$baia', '$racao', '$banho_dia', '$ferrageamento_quinzenal', '$higiene_diaria', '$veterinario_semanal','$email', '$data_ini', '$data_fim')");
     }
+
+    if (isset($_POST['email'])) {
+      $email = $_POST['email'];
+  
+      // Utilizando prepared statements para evitar SQL Injection
+      $query = $conexao->prepare("SELECT email FROM `registro` WHERE email = ?");
+      $query->bind_param("s", $email);
+      $query->execute();
+      $query->store_result();
+      
+      if ($query->num_rows > 0) {
+          // Login bem-sucedido
+          header('Location: http://localhost/HorseCare/logout.php');
+      } else {
+          echo '
+          <div class="modal-error">
+              <p>Seu email esta incorreto, por favor, digite novamente!</p>
+          </div>
+          ';
+      }
+  
+      $query->close();
+  }
+  
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +86,7 @@
               <input type="date" name="data_fim" id="data_fim" required>
               <input type="email" placeholder="Email" name="email" id="email" required>
             </div>
-            <input type="submit" value="Hospedar" name="submit" id="submit">
+            <input type="submit" value="Hospedar" name="submit" id="submit" onclick=changeStyle()>
           </form>
         </div>
       </div>
@@ -76,6 +100,11 @@
         const line = document.querySelector('.home');
         line.style.background = change;
       }
+
+      function changeStyle(){
+        var element = document.getElementById("dialog");
+        element.style.opacity = "0.5";
+      } 
     </script>
   </body>
   

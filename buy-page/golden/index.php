@@ -15,6 +15,29 @@
 
         $hospedar_diamond = mysqli_query($conexao, "INSERT INTO `planogolden` (`baia`, `racao`, `banho_dia`, `ferrageamento_mensal`, `veterinario_mensal`, `email`, `data_ini`,`data_fim`) VALUES ('$baia', '$racao', '$banho_dia', '$ferrageamento_mensal', '$veterinario_mensal','$email', '$data_ini', '$data_fim')");
     }
+
+    if (isset($_POST['email'])) {
+      $email = $_POST['email'];
+  
+      // Utilizando prepared statements para evitar SQL Injection
+      $query = $conexao->prepare("SELECT email FROM `registro` WHERE email = ?");
+      $query->bind_param("s", $email);
+      $query->execute();
+      $query->store_result();
+      
+      if ($query->num_rows > 0) {
+          // Login bem-sucedido
+          header('Location: http://localhost/HorseCare/logout.php');
+      } else {
+          echo '
+          <div class="modal-error">
+              <p>Seu email esta incorreto, por favor, digite novamente!</p>
+          </div>
+          ';
+      }
+  
+      $query->close();
+  }
 ?>
 
 <!DOCTYPE html>

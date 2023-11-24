@@ -6,7 +6,7 @@
     
         $nome = $_POST['nome'];
         $email = $_POST['email'];
-        $senha = $_POST['senha'];
+        $senha = ($_POST['senha']);
 
         $inserir = mysqli_query($conexao, "INSERT INTO `registro` (`nome`, `email`, `senha`) VALUES ('$nome', '$email', '$senha')");
     }
@@ -38,7 +38,7 @@ if (isset($_POST['login'])) {
     
     if ($query->num_rows > 0) {
         // Login bem-sucedido
-        header('Location: http://localhost/HorseCareTest/logout.php');
+        header('Location: http://localhost/HorseCare/logout.php');
     } else {
         echo '
         <div class="modal-error">
@@ -102,7 +102,7 @@ $conexao->close();
                 <p>Esqueceu sua senha? <a href="#">Recupere!</a></p>
                 <input type="submit" value="Login" id="submit" name="login">
             </form>
-            <form id="form-login" method="post">
+            <!-- <form id="form-login" method="post">
                 <h1>Fazer login</h1>
 
                 <div class="social-icons">
@@ -129,7 +129,7 @@ $conexao->close();
                 >
                 <p>Esqueceu sua senha? <a href="#">Recupere!</a></p>
                     
-            </form>
+            </form> -->
         </div>
         <div class="toggle-container">
             <div class="toggle">
