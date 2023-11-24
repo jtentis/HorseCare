@@ -146,7 +146,7 @@ $conexao->close();
             </div>
         </div>
     </div>
-    <a href="http://localhost/HorseCareTest/index.php" class="para-o-topo">
+    <a href="http://localhost/HorseCare/index.php" class="para-o-topo">
 		<span class="material-icons">arrow_back</span>
 	</a>
 
