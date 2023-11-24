@@ -7,8 +7,11 @@
         $nome = $_POST['nome'];
         $email = $_POST['email'];
         $senha = (base64_encode($_POST['senha']));
+        $cpf = $_POST['cpf'];
+        $endereco = $_POST['endereco'];
+        $telefone = $_POST['telefone'];
 
-        $inserir = mysqli_query($conexao, "INSERT INTO `registro` (`nome`, `email`, `senha`) VALUES ('$nome', '$email', '$senha')");
+        $inserir = mysqli_query($conexao, "INSERT INTO `registro` (`nome`, `email`, `senha`, `cpf`, `endereco`, `telefone`) VALUES ('$nome', '$email', '$senha', '$cpf', '$endereco', '$telefone')");
     }
 
 
@@ -82,6 +85,9 @@ $conexao->close();
                 <input type="text" placeholder="Nome" name="nome" id="name" required>
                 <input type="email" placeholder="Email" name="email" id="email" required>
                 <input type="password" placeholder="Senha" name="senha" id="senha" required>
+                <input type="text" placeholder="CPF" name="cpf" id="cpf" required>
+                <input type="text" placeholder="Endereço" name="endereco" id="cpf" required>
+                <input type="text" placeholder="Telefone" name="telefone" id="telefone" required>
                 <!-- <input type="password" placeholder="Confirmação de senha"> -->
                 <input type="submit" value="Registrar" id="submit" name="submit">
             </form>
