@@ -251,3 +251,44 @@ button.hidden:hover{
     color: var(--primary);
     transition: all 0.3s ease-in-out;
 }
+
+.modal-error{
+    width: 350px;
+    height: 70px;
+    background-color: #c66b6b78;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 5px;
+    color: white;
+    border: solid 1px;
+    border-color: #9b4a4a;
+}
+
+.para-o-topo{
+    width: 50px;
+    height: 50px;
+	position: fixed;
+	top: 32px;
+	left: 32px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	border-radius: 40%;
+	padding: 0.5rem;
+	text-decoration: none;
+	transition: 0.2s ease-out;
+    opacity: 1;
+    color: var(--primary);
+    rotate: (90deg);
+    cursor: pointer;
+}
+
+.para-o-topo:hover{
+    background-color: #15180e;
+    color: white;
+}
