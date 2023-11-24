@@ -46,6 +46,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="Imagens/LOGO-CUT-WHITE.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <title>HorseCare / Planos / Golden</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -88,6 +89,9 @@
         </div>
       </div>
     </section>
+      <a href="http://localhost/HorseCare/logout.php" class="para-o-topo">
+		    <span class="material-icons">arrow_back</span>
+	    </a>
     <script>
       function img(anything) {
         document.querySelector('.slide').src = anything;

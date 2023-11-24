@@ -48,6 +48,7 @@
     <link rel="icon" href="Imagens/LOGO-CUT-WHITE.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <title>HorseCare / Planos / Diamond</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -90,6 +91,9 @@
           </form>
         </div>
       </div>
+      <a href="http://localhost/HorseCare/logout.php" class="para-o-topo">
+		    <span class="material-icons">arrow_back</span>
+	    </a>
     </section>
     <script>
       function img(anything) {

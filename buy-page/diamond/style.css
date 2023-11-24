@@ -214,3 +214,28 @@ input[type='submit']:hover{
   margin-bottom: 10%;
   color: red;
 }
+
+.para-o-topo{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 32px;
+  left: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 40%;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+  opacity: 1;
+  color: var(--primary);
+  rotate: (90deg);
+  cursor: pointer;
+}
+
+.para-o-topo:hover{
+  background-color: #15180e;
+  color: white;
+}
