@@ -1,3 +1,14 @@
+<?php
+    if(isset($_POST['cadastrar'])){
+
+        include_once('C:\xampp\htdocs\HorseCare\conexao.php');
+    
+        $email = $_POST['email'];
+
+        $newsletter = mysqli_query($conexao, "INSERT INTO `newsletter` (`email`) VALUES ('$email')");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -214,9 +225,11 @@
         <div class="informacoes email">
             <h1>News Letter</h1>
             <h3>Email</h3>
-            <input type="email" class="email" id="" placeholder="Digite seu email aqui...">
-            <a href="#"><button>Cadastrar</button></a>
-            
+            <form id="newsletter" action="index.php" method="post">
+                <input type="email" class="email" name="email" placeholder="Digite seu email aqui...">
+                <!-- <input type="submit" name="cadastrar" value="Cadastrar"> -->
+                <a href="#"><button type="submit" name="cadastrar">Cadastrar</button></a>
+            </form>
         </div>
     </div>
     <div class="copyright">Copyright &copy 2023 HorseCare | Copyright &copy 2023 HorseCare | Copyright &copy 2023 HorseCare | Copyright &copy 2023 HorseCare</div>
