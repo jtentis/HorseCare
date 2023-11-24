@@ -1,5 +1,5 @@
 <?php
-
+    
     if(isset($_POST['submit'])){
 
         include_once('C:\xampp\htdocs\HorseCare\conexao.php');
@@ -11,25 +11,46 @@
         $inserir = mysqli_query($conexao, "INSERT INTO `registro` (`nome`, `email`, `senha`) VALUES ('$nome', '$email', '$senha')");
     }
 
-    // if(isset($_GET['login'])){
 
-    //     $login = mysqli_query($conexao, "SELECT nome, senha FROM `registro` WHERE nome ='$nome' AND senha = '$senha'");
-    //     $res = mysqli_fetch_row($login);
+?>
 
-    //     include_once('C:\xampp\htdocs\HorseCare\conexao.php');
 
-    //     $nome = $_GET['nome'];
-    //     $email = $_GET['email'];
+<?php
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$dbName = 'horsecare';
+$conexao = new mysqli($host, $username, $password, $dbName);
 
-    //     if($res){
-    //         header('location:/index.html');
-    //     }
+if ($conexao->connect_error) {
+    die("Connection failed: " . $conexao->connect_error);
+}
 
-    //     else{
-    //         header('location:error.php');
-    //     }
-    // }
+if (isset($_POST['login'])) {
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
 
+    // Utilizando prepared statements para evitar SQL Injection
+    $query = $conexao->prepare("SELECT email, senha FROM `registro` WHERE email = ? AND senha = ?");
+    $query->bind_param("ss", $email, $senha);
+    $query->execute();
+    $query->store_result();
+    
+    if ($query->num_rows > 0) {
+        // Login bem-sucedido
+        header('Location: http://localhost/HorseCareTest/logout.php');
+    } else {
+        echo '
+        <div class="modal-error">
+            <p>Seu email ou senha estão incorretos. Por favor, tente novamente.</p>
+        </div>
+        ';
+    }
+
+    $query->close();
+}
+
+$conexao->close();
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +60,8 @@
     <link rel="icon" href="LOGO/LOGO-CUT-WHITE.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5f5ea0b0a8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>HorseCare / Login</title>
 </head>
@@ -57,16 +79,17 @@
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>ou preencha seus dados</span>
-                <input type="text" placeholder="Nome" name="nome" id="name">
-                <input type="email" placeholder="Email" name="email" id="email">
-                <input type="password" placeholder="Senha" name="senha" id="senha">
+                <input type="text" placeholder="Nome" name="nome" id="name" required>
+                <input type="email" placeholder="Email" name="email" id="email" required>
+                <input type="password" placeholder="Senha" name="senha" id="senha" required>
                 <!-- <input type="password" placeholder="Confirmação de senha"> -->
                 <input type="submit" value="Registrar" id="submit" name="submit">
             </form>
         </div>
         <div class="form-container sign-in">
-            <form action="index.php" method="GET">
-                <h1>Fazer login</h1>
+
+        <form action="index.php" method="POST">
+                <h1>Fazer Login</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
@@ -74,10 +97,38 @@
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>ou use seu email e senha</span>
-                <input type="email" placeholder="Email" name="nome">
-                <input type="password" placeholder="Senha" name="senha">
+                <input type="email" placeholder="Email" name="email" id="email" required>
+                <input type="password" placeholder="Senha" name="senha" id="senha" required>
                 <p>Esqueceu sua senha? <a href="#">Recupere!</a></p>
                 <input type="submit" value="Login" id="submit" name="login">
+            </form>
+            <form id="form-login" method="post">
+                <h1>Fazer login</h1>
+
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>ou use seu email e senha</span>
+
+                <input 
+                    type="email" 
+                    placeholder="Email" 
+                    name="email" 
+                    id="email"
+                    required
+                >
+                <input 
+                    type="password" 
+                    placeholder="Senha" 
+                    name="senha"
+                    id="senha"
+                    required
+                >
+                <p>Esqueceu sua senha? <a href="#">Recupere!</a></p>
+                    
             </form>
         </div>
         <div class="toggle-container">
@@ -95,6 +146,9 @@
             </div>
         </div>
     </div>
+    <a href="http://localhost/HorseCareTest/index.php" class="para-o-topo">
+		<span class="material-icons">arrow_back</span>
+	</a>
 
     <script src="script.js"></script>
 </body>
