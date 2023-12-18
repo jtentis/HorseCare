@@ -898,6 +898,7 @@ div.card:nth-child(3) > div:nth-child(2) > a:nth-child(10){
     transition: all 0.6s ease-in-out;
     backdrop-filter: blur(15px);
     z-index: 1040;
+    backdrop-filter: blur(10px);
 }
 
 .container-login p{
@@ -1097,4 +1098,19 @@ button.hidden:hover{
     background-color: white;
     color: var(--primary);
     transition: all 0.3s ease-in-out;
+}
+
+.container-login .fechar{
+    position: absolute;
+    top: -5px;
+    right: -20px;
+    z-index: 102309;
+    background-color: #15180e00;
+    color: black;
+}
+
+.is-blurred {
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    transform: scale(1.05);
 }

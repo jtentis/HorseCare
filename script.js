@@ -1,6 +1,9 @@
 const container = document.getElementById('container-login');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
+const modal = document.getElementById('login-modal')
+const body = document.getElementById('main-container')
+const teste = document.getElementById('login-button')
 
 //fade in animação
 const observer = new IntersectionObserver((entries) => {
@@ -24,11 +27,6 @@ window.addEventListener('scroll', function(){
     scroll.classList.toggle("active", window.scrollY > 800)
 })
 
-document.getElementById('login-button').addEventListener('click',
-function(){
-    document.querySelector('.container-login').style.opacity='1';
-})
-
 registerBtn.addEventListener('click', () => {
     container.classList.add("active");
 });
@@ -36,3 +34,18 @@ registerBtn.addEventListener('click', () => {
 loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
+
+//TODO: verificar pq blur no main-container nao funfa
+
+function abrirModal(){
+    document.querySelector('.container-login').style.opacity='1';
+    document.querySelector('.header').classList.add('is-blurred')
+    document.querySelector('.landing-page').classList.add('is-blurred')
+    modal.addEventListener('click', (e)=>{
+        if(e.target.id == 'fechar' || e.target.id == 'login-modal'){
+            document.querySelector('.container-login').style.opacity='0';
+            document.querySelector('.header').classList.remove('is-blurred')
+            document.querySelector('.landing-page').classList.remove('is-blurred')
+        }
+    })
+}
